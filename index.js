@@ -15,7 +15,8 @@ app.use(express.urlencoded({
 app.use('/', userRoutes)
 
 app.get('/',(req,res)=>{
-    res.append('Content-Type', 'application/javascript; charset=UTF-8');
+    res.setHeader('Content-Type', 'application/json; charset=UTF-8');
+    res.send('working')
 })
 
 app.listen(PORT, ()=>{
