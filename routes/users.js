@@ -6,7 +6,7 @@ const router = express.Router()
 
 const aboutMe = [
       { 
-        'slackUsername': "Denis Ruto",
+        'slackUsername': "Denis kiplangat Ruto",
         'backend': true,
         'age': 24,
         'bio':'Hello World. My name is Denis and I love Tech'
