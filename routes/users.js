@@ -6,10 +6,12 @@ const router = express.Router()
 
 const data={
     "slackUsername": "Denis Kiplangat",
-    "Backend":true,
+    "backend":true,
     "age":24,
     "bio":'My name is Denis and I love code'  
 }
+
+
 
 router.get('/' ,(req,res)=>{
     res.json(data)
