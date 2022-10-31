@@ -4,7 +4,7 @@ import userRoutes from './routes/users.js'
 
 const app = express()
 
-const PORT = process.env.PORT || 3002
+const PORT = process.env.PORT || 80
 
 app.use(express.json());
 app.use(express.urlencoded({
