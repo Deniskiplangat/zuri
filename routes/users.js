@@ -1,21 +1,22 @@
-import express from 'express'
 
+
+const express = require('express')
 const router = express.Router()
 
 
+const data={
+    "slackUsername": "Denis Kiplangat",
+    "Backend":true,
+    "age":24,
+    "bio":'My name is Denis and I love code'  
+}
 
-const aboutMe = 
-      { 
-        'slackUsername': "Denis kiplangat Ruto",
-        'backend': true,
-        'age': 24,
-        'bio':'Hello World. My name is Denis and I love Tech'
-     }
-
-
-const about = JSON.stringify(aboutMe)
-router.get('/',(req,res)=>{
-    res.send(about)
+router.get('/' ,(req,res)=>{
+    res.json(data)
+    console.log('hello')
 })
 
-export default router;
+
+
+
+module.exports = router;

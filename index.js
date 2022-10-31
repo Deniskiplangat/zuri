@@ -1,25 +1,27 @@
-import express from 'express';
-
-import userRoutes from './routes/users.js'
-
-const app = express()
 
 
-const PORT = process.env.PORT || 80
+const express =require ('express')
+const app =express()
 
-app.use(express.json());
-app.use(express.urlencoded({
-  extended: true
+const routes = require('./routes/users.js')
+const cors = require('cors');
+
+
+
+
+app.use(express.json())
+
+
+
+app.use('/', routes)
+app.use(cors({
+    origin: '*'
 }));
 
-app.use('/', userRoutes)
+ 
 
-app.get('/',(req,res)=>{
-    res.setHeader('Content-Type', 'application/json; charset=UTF-8');
-    res.send('working')
-    res.status(200)
-})
+const port = process.env.PORT || 80
 
-app.listen(PORT, ()=>{
-    console.log('hello world')
+app.listen(port,()=>{
+    console.log('server running on port:' + port );
 })
