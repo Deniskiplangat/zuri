@@ -2,6 +2,8 @@ import express from 'express'
 
 const router = express.Router()
 
+
+
 const aboutMe = [
       { 
         slackUsername: "Denis Ruto",
@@ -11,8 +13,9 @@ const aboutMe = [
      }
 ]
 
+const about = JSON.stringify(aboutMe)
 router.get('/',(req,res)=>{
-    res.send(aboutMe)
+    res.send(about)
 })
 
 export default router;
