@@ -17,6 +17,7 @@ app.use('/', userRoutes)
 app.get('/',(req,res)=>{
     res.setHeader('Content-Type', 'application/json; charset=UTF-8');
     res.send('working')
+    res.status(200)
 })
 
 app.listen(PORT, ()=>{
